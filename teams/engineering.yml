@@ -1,4 +1,4 @@
-name: New Hires
+name: Engineering Team
 policies:
   - path: ../lib/macos-device-health.policies.yml
 queries:
