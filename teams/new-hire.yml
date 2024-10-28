@@ -8,7 +8,6 @@ agent_options:
 controls:
   scripts:
     - path: ../lib/remove-zoom-artifacts.script.sh
-    - path: ../lib/set-timezone.script.sh
 team_settings:
   secrets:
     - secret: "$FLEET_NEW_HIRE_ENROLL_SECRET"
