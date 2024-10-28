@@ -10,5 +10,5 @@ controls:
     - path: ../lib/remove-zoom-artifacts.script.sh
 team_settings:
   secrets:
-    - secret: "$FLEET_NEW_HIRE_ENROLL_SECRET"
+    - secret: "$FLEET_ENGINEERING_ENROLL_SECRET"
 software:
