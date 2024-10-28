@@ -17,7 +17,6 @@ agent_options:
 controls:
   scripts:
     - path: ../lib/remove-zoom-artifacts.script.sh
-    - path: ../lib/set-timezone.script.sh
 team_settings:
   secrets:
     - secret: "$FLEET_WORKSTATIONS_ENROLL_SECRET"
