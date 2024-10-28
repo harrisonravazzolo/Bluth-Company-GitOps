@@ -1,6 +1,7 @@
 name: Engineering Team
 policies:
   - path: ../lib/macos-device-health.policies.yml
+  - path: ../lib/windows-ntp-policy.policies.yml
 queries:
   - path: ../lib/collect-usb-devices.queries.yml
 agent_options:
@@ -8,6 +9,7 @@ agent_options:
 controls:
   scripts:
     - path: ../lib/remove-zoom-artifacts.script.sh
+    - path: ../lib/enable_ntp.ps1
 team_settings:
   secrets:
     - secret: "$FLEET_ENGINEERING_ENROLL_SECRET"
