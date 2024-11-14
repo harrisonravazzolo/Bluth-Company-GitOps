@@ -1,0 +1,14 @@
+<Replace>
+  <!-- Allows Personalization CSPs to be deployed on non-Enterprise versions of Windows.
+       Setting this value to true triggers the action to configure a device as education environment. 
+       Thorough testing is crucial to ensure it does not disrupt workflows or create compatibility issues. -->
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">bool</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Vendor/MSFT/SharedPC/SetEduPolicies</LocURI>
+    </Target>
+    <Data>true</Data>
+  </Item>
+</Replace>

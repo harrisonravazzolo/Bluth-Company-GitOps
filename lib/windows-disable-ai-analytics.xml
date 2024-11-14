@@ -1,0 +1,25 @@
+<Replace>
+    <!-- Control whether Windows saves snapshots of the screen and analyzes the user's activity on their device. -->     
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">int</Format>
+      </Meta>
+      <Target>
+        <LocURI>./User/Vendor/MSFT/Policy/Config/WindowsAI/DisableAIDataAnalysis</LocURI>
+      </Target>
+      <Data>1</Data>
+    </Item>
+  </Replace>
+  <Replace>
+    <!-- Disable Copilot  -->   
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">int</Format>
+      </Meta>
+      <Target>
+        <LocURI>./User/Vendor/MSFT/Policy/Config/WindowsAI/TurnOffWindowsCopilot</LocURI>
+      </Target>
+      <Data>0</Data>
+    </Item>
+  </Replace>
+  

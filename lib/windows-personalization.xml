@@ -1,0 +1,32 @@
+<Replace>
+      <!-- Set Desktop Image
+         Personalization CSP is supported in Windows Enterprise and Education SKUs. 
+         It works in Windows Professional only when SetEduPolicies in SharedPC CSP is set.
+         See windows-allow-personalization.xml for details -->
+    <CmdID>1</CmdID>
+    <Item>
+        <Target>
+            <LocURI>
+                ./Vendor/MSFT/Personalization/DesktopImageUrl
+            </LocURI>
+        </Target>
+        <Meta>
+            <Format xmlns="syncml:metinf">chr</Format>
+            <Type>text/plain</Type>
+        </Meta>
+        <Data>{{yourUrlHere}}</Data>
+    </Item>
+</Replace>
+<Replace>
+    <!-- Set Locksreen Image -->
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">chr</Format>
+      </Meta>
+      <Target>
+        <LocURI>./Vendor/MSFT/Personalization/LockScreenImageUrl
+        </LocURI>
+      </Target>
+      <Data>{{yourUrlHere}}</Data>
+    </Item>
+  </Replace>

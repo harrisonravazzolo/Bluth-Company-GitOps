@@ -1,0 +1,18 @@
+<Replace>
+    <!-- Enables logging of all PowerShell script input to the Microsoft-Windows-PowerShell/Operational event log. -->     
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">chr</Format>
+      </Meta>
+      <Target>
+        <LocURI>./Device/Vendor/MSFT/Policy/Config/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging</LocURI>
+      </Target>
+      <Data>
+        <![CDATA[<enabled/><data id="EnableUpdateHelpDefaultSourcePath" value="1"/><data
+          id="EnableScriptBlockLogging" value="1"/><data
+          id="EnableTranscripting" value="1"/><data
+          id="EnableModuleLogging" value="1"/><data
+          id="EnableScripts" value="1"/>]]>
+      </Data>
+    </Item>
+  </Replace>
