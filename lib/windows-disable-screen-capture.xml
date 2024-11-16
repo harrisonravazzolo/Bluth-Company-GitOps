@@ -1,0 +1,24 @@
+<Replace>
+  <!-- Disable Screen Capture -->
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">int</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/Experience/AllowScreenCapture</LocURI>
+    </Target>
+    <Data>0</Data>
+  </Item>
+</Replace>
+<Replace>
+  <!-- Disable screen recording in snipping tool. Warning: this policy does not work on Win Pro, only Enterprise and Edu -->
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">int</Format>
+    </Meta>
+    <Target>
+      <LocURI>./User/Vendor/MSFT/Policy/Config/Experience/AllowScreenRecorder</LocURI>
+    </Target>
+    <Data>0</Data>
+  </Item>
+</Replace>

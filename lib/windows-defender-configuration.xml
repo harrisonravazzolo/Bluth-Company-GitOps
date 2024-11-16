@@ -1,0 +1,60 @@
+<Replace>
+    <!-- Enable Network Protection in Defender -->     
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">int</Format>
+      </Meta>
+      <Target>
+        <LocURI>./Device/Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection</LocURI>
+      </Target>
+      <Data>2</Data>
+    </Item>
+  </Replace>
+  <Replace>
+    <!-- Enable Cloud Protection -->     
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">int</Format>
+      </Meta>
+      <Target>
+        <LocURI>./Device/Vendor/MSFT/Policy/Config/Defender/AllowCloudProtection</LocURI>
+      </Target>
+      <Data>1</Data>
+    </Item>
+  </Replace>
+  <Replace>
+    <!-- Check for signatures before running scan -->     
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">int</Format>
+      </Meta>
+      <Target>
+        <LocURI>./Device/Vendor/MSFT/Policy/Config/Defender/CheckForSignaturesBeforeRunningScan</LocURI>
+      </Target>
+      <Data>1</Data>
+    </Item>
+  </Replace>
+  <Replace>
+    <!-- Run scan every Wednesday -->     
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">int</Format>
+      </Meta>
+      <Target>
+        <LocURI>./Device/Vendor/MSFT/Policy/Config/Defender/ScheduleScanDay</LocURI>
+      </Target>
+      <Data>4</Data>
+    </Item>
+  </Replace>
+  <Replace>
+    <!-- Run scan 7am (Wednesday) -->     
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">int</Format>
+      </Meta>
+      <Target>
+        <LocURI>./Device/Vendor/MSFT/Policy/Config/Defender/ScheduleScanTime</LocURI>
+      </Target>
+      <Data>420</Data>
+    </Item>
+  </Replace>

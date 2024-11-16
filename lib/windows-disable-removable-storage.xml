@@ -1,0 +1,32 @@
+<Replace>
+    <!--DenyAll_Access_1 is user-specific blocking. Comment out or remove as you see fit. -->
+  <CmdID>1</CmdID>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+      <Type>text/plain</Type>
+    </Meta>
+    <Target>
+      <LocURI>./User/Vendor/MSFT/Policy/Config/ADMX_RemovableStorage/RemovableStorageClasses_DenyAll_Access_1</LocURI>
+    </Target>
+    <Data>
+        <![CDATA[<enabled/>]]>
+    </Data>
+  </Item>
+</Replace>
+<Replace>
+    <!--DenyAll_Access_2 is device-specific blocking. Comment out or remove as you see fit. -->
+    <CmdID>1</CmdID>
+    <Item>
+      <Meta>
+        <Format xmlns="syncml:metinf">chr</Format>
+        <Type>text/plain</Type>
+      </Meta>
+      <Target>
+        <LocURI>./User/Vendor/MSFT/Policy/Config/ADMX_RemovableStorage/RemovableStorageClasses_DenyAll_Access_1</LocURI>
+      </Target>
+      <Data>
+          <![CDATA[<enabled/>]]>
+      </Data>
+    </Item>
+  </Replace>
