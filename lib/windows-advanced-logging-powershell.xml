@@ -1,5 +1,5 @@
 <Replace>
-    <!-- Enables logging of all PowerShell script input to the Microsoft-Windows-PowerShell/Operational event log. -->     
+    <!-- Powershell configs, modify the admx keys as needed for your env -->     
     <Item>
       <Meta>
         <Format xmlns="syncml:metinf">chr</Format>
@@ -8,11 +8,11 @@
         <LocURI>./Device/Vendor/MSFT/Policy/Config/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging</LocURI>
       </Target>
       <Data>
-        <![CDATA[<enabled/><data id="EnableUpdateHelpDefaultSourcePath" value="1"/><data
-          id="EnableScriptBlockLogging" value="1"/><data
-          id="EnableTranscripting" value="1"/><data
-          id="EnableModuleLogging" value="1"/><data
-          id="EnableScripts" value="1"/>]]>
+        <![CDATA[<enabled/><data id="ExecutionPolicy" value="AllSigned"/>
+        <data id="Listbox_ModuleNames" value="*"/>
+        <data id="OutputDirectory" value="false"/>
+        <data id="EnableScriptBlockInvocationLogging" value="true"/>
+        <data id="SourcePathForUpdateHelp" value="false"/>]]>
       </Data>
     </Item>
   </Replace>

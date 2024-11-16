@@ -11,7 +11,7 @@
     </Item>
   </Replace>
   <Replace>
-    <!-- Disable Copilot  -->   
+    <!-- Disable Copilot, may not work as it's depreciated -->   
     <Item>
       <Meta>
         <Format xmlns="syncml:metinf">int</Format>

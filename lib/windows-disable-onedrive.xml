@@ -1,5 +1,5 @@
 <Replace>
-    <!-- Disallows the user to change date and time settings -->     
+    <!-- Disable OneDrive -->     
     <Item>
       <Meta>
         <Format xmlns="syncml:metinf">int</Format>
