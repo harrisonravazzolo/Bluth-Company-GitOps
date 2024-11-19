@@ -1,0 +1,26 @@
+<Replace>
+  <!-- This profile allowed the following services to be used: 
+        1 .Allow Audio Headsets and Speakers (Voice & Music)
+        2. Classic Keyboards and Mice
+        3. LE Keyboards and Mice
+        The following services are disabled:
+        1. Allow File Transfer
+        See this article for more details: https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-bluetooth#related-articles
+         -->
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/Bluetooth/ServicesAllowedList</LocURI>
+    </Target>
+    <Data>{0000111E-0000-1000-8000-00805F9B34FB};{0000110B-0000-1000-8000-00805F9B34FB};
+      {00001203-0000-1000-8000-00805F9B34FB};{00001108-0000-1000-8000-00805F9B34FB};
+      {0000110C-0000-1000-8000-00805F9B34FB};{0000110E-0000-1000-8000-00805F9B34FB};
+      {0000110F-0000-1000-8000-00805F9B34FB};{00001200-0000-1000-8000-00805F9B34FB};
+      {00001124-0000-1000-8000-00805F9B34FB};{00001200-0000-1000-8000-00805F9B34FB};
+      {00001801-0000-1000-8000-00805F9B34FB};{00001812-0000-1000-8000-00805F9B34FB};
+      {00001800-0000-1000-8000-00805F9B34FB};{0000180A-0000-1000-8000-00805F9B34FB};
+      {00001813-0000-1000-8000-00805F9B34FB}</Data>
+  </Item>
+</Replace>
