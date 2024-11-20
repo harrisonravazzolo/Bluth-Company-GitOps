@@ -22,4 +22,4 @@ team_settings:
     - secret: "$FLEET_WORKSTATIONS_CANARY_ENROLL_SECRET"
 software:
   packages:
-    - path: ../lib/firefox.package.yml
+    - path: ../lib/slack-linux.package.yml
