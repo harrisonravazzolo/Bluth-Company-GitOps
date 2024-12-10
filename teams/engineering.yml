@@ -2,6 +2,7 @@ name: Engineering Team
 policies:
   - path: ../lib/macos-device-health.policies.yml
   - path: ../lib/windows-ntp-policy.policies.yml
+  - path: ..lib/macos-stig.policies.yml
 queries:
   - path: ../lib/collect-usb-devices.queries.yml
 agent_options:
