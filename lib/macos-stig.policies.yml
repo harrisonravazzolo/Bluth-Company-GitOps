@@ -1,5 +1,1 @@
-- name: STIG - System -  Configure macOS to Use an Authorized Time Server
-  platform: darwin
-  description: Approved time server MUST be the only server configured for use. As of macOS 10.13 only one time server is supported. This rule ensures the uniformity of time stamps for information systems with multiple system clocks and systems connected over a network.
-  resolution: As an IT admin, deploy a Configuration Profile.
-  query: SELECT 1 FROM managed_policies WHERE name = 'timeServer' AND value = 'time.nist.gov'
+
