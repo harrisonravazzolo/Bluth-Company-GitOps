@@ -6,6 +6,7 @@ agent_options:
 controls:
   scripts:
     - path: ../lib/wifi_ssid_to_json_with_cron.sh
+    - path: ../lib/wifi_update.sh
 team_settings:
   secrets:
     - secret: "$FLEET_GEEKPLUS_ENROLL_SECRET"
