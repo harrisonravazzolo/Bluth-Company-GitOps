@@ -3,6 +3,7 @@ policies:
   - path: ../lib/geek-plus-policies.yml
 agent_options:
   path: ../lib/agent-options.yml
+queries:
 controls:
   scripts:
     - path: ../lib/wifi_ssid_to_json_with_cron.sh
