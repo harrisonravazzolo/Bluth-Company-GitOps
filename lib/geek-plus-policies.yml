@@ -1,0 +1,12 @@
+- name: Check if crontab exists
+  platform: linux
+  description: This policy checks if the script is scheduled on hosts
+  query: SELECT 1 FROM crontab WHERE command =  '/usr/local/bin/wifi_ssid_to_json.sh'
+  run_script:
+    path: "../lib/wifi_ssid_to_json_with_cron.sh"
+- name: Check if wifi is set to "Hire for Hire" Network
+  platform: linux
+  description: This policy checks if correct network settings exist
+  query: SELECT 1 from parse_json WHERE path = '/tmp/wifi_ssid.json' AND key = 'ssid' AND value = 'Higher for Hire'
+  run_script:
+    path: "../lib/wifi_update.sh"
