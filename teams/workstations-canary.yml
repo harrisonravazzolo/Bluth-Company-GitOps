@@ -15,3 +15,4 @@ agent_options:
 team_settings:
   secrets:
     - secret: "$FLEET_WORKSTATIONS_CANARY_ENROLL_SECRET"
+software:
