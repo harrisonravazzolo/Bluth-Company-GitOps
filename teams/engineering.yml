@@ -8,7 +8,11 @@ agent_options:
   path: ../lib/agent-options.yml
 controls:
   scripts:
-#    - path: ../lib/remove-zoom-artifacts.script.sh
+    - path: ../lib/macos/scripts/collect-fleetd-logs.sh
+    - path: ../lib/macos/scripts/dock-config.sh
+    - path: ../lib/macos/scripts/enable_auditd.sh
+    - path: ../lib/macos/scripts/set_ssh_banner.sh
+    - path: ../lib/macos/scripts/start_auditd.sh
     - path: ../lib/windows/scripts/enable_ntp.ps1
 team_settings:
   secrets:
