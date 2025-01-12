@@ -1,22 +1,16 @@
-# Teams are available in Fleet Premium. 
-
-# This file updates policies, queries, agent options, controls, and software for hosts assigned to the "Workstations" team.
-
-# To add another team, create a new file in the teams/ directory and copy and paste the contents from this file.
-
 name: Workstations
 policies:
-  - path: ../lib/macos-device-health.policies.yml
-  - path: ../lib/windows-device-health.policies.yml
-  - path: ../lib/linux-device-health.policies.yml
+  - path: ../lib/macos/policies/macos-device-health.policies.yml
+#  - path: ../lib/windows-device-health.policies.yml
+#  - path: ../lib/linux-device-health.policies.yml
 queries:
-  - path: ../lib/collect-usb-devices.queries.yml
-  - path: ../lib/collect-failed-login-attempts.queries.yml
+  - path: ../lib/macos/queries/collect-usb-devices.queries.yml
+  - path: ../lib/macos/collect-failed-login-attempts.queries.yml
 agent_options:
   path: ../lib/agent-options.yml
-controls:
-  scripts:
-    - path: ../lib/remove-zoom-artifacts.script.sh
+#controls:
+#  scripts:
+#    - path: ../lib/remove-zoom-artifacts.script.sh
 team_settings:
   secrets:
     - secret: "$FLEET_WORKSTATIONS_ENROLL_SECRET"

@@ -1,0 +1,11 @@
+<Replace>
+    <Item>
+        <Meta>
+            <Format xmlns="syncml:metinf">chr</Format>
+        </Meta>
+        <Target>
+            <LocURI>./Device/Vendor/MSFT/DeviceName</LocURI>
+        </Target>
+        <Data>SecretComputer</Data>
+    </Item>
+</Replace>
