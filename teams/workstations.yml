@@ -13,7 +13,7 @@ team_settings:
   secrets:
     - secret: "$FLEET_WORKSTATIONS_ENROLL_SECRET"
 software:
-packages:
+  packages:
     - path: ../lib/macos/software/mozilla-firefox.yml # Mozilla Firefox for MacOS (universal)
     - path: ../lib/macos/software/google-chrome.yml # Google Chrome for macOS
     - path: ../lib/macos/software/zoom.yml # Zoom for macOS
