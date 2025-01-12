@@ -6,20 +6,12 @@
 
 name: Workstations (canary)
 policies:
-  - path: ../lib/macos-device-health.policies.yml
-  - path: ../lib/windows-device-health.policies.yml
-  - path: ../lib/linux-device-health.policies.yml
+  - path: ../lib/macos/policies/macos-device-health.policies.yml
 queries:
-  - path: ../lib/collect-usb-devices.queries.yml
-  - path: ../lib/collect-failed-login-attempts.queries.yml
+  - path: ../lib/macos/queries/collect-usb-devices.queries.yml
+  - path: ../lib/macos/queries/collect-failed-login-attempts.queries.yml
 agent_options:
   path: ../lib/agent-options.yml
-controls:
-  scripts:
-    - path: ../lib/remove-zoom-artifacts.script.sh
 team_settings:
   secrets:
     - secret: "$FLEET_WORKSTATIONS_CANARY_ENROLL_SECRET"
-software:
-  packages:
-    - path: ../lib/slack-linux.package.yml

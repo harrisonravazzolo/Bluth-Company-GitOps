@@ -1,8 +1,6 @@
 name: Workstations
 policies:
   - path: ../lib/macos/policies/macos-device-health.policies.yml
-#  - path: ../lib/windows-device-health.policies.yml
-#  - path: ../lib/linux-device-health.policies.yml
 queries:
   - path: ../lib/macos/queries/collect-usb-devices.queries.yml
   - path: ../lib/macos/collect-failed-login-attempts.queries.yml
