@@ -3,7 +3,7 @@ policies:
   - path: ../lib/macos/policies/macos-device-health.policies.yml
 queries:
   - path: ../lib/macos/queries/collect-usb-devices.queries.yml
-  - path: ../lib/macos/collect-failed-login-attempts.queries.yml
+  - path: ../lib/macos/queries/collect-failed-login-attempts.queries.yml
 agent_options:
   path: ../lib/agent-options.yml
 #controls:
