@@ -11,7 +11,6 @@ controls:
   macos_settings:
     custom_settings:
       - path: ../lib/macos/configuration-profiles-traditional/date-time.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-bluetooth-file-sharing.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-content-caching.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-guest-account.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-guest-shares.mobileconfig
@@ -43,7 +42,6 @@ controls:
     grace_period_days: 2
   scripts:
     - path: ../lib/macos/scripts/collect-fleetd-logs.sh
-    - path: ../lib/macos/scripts/dock-config.sh
     - path: ../lib/macos/scripts/enable_auditd.sh
     - path: ../lib/macos/scripts/set_ssh_banner.sh
     - path: ../lib/macos/scripts/start_auditd.sh
