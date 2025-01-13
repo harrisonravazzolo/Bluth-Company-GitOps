@@ -9,7 +9,7 @@ agent_options:
 controls:
   enable_disk_encryption: true
   custom_settings:
-      - path: ../lib/macos/configuration-profiles-traditional-traditional/date-time.mobileconfig
+      - path: ../lib/macos/configuration-profiles-traditional/date-time.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-bluetooth-file-sharing.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-content-caching.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-guest-account.mobileconfig
@@ -26,7 +26,6 @@ controls:
       - path: ../lib/macos/configuration-profiles-traditional/limit-ad-tracking.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/secure-terminal-keyboard.mobileconfig
       - path: ../lib/macos/configuration-profiles-ddm/passcode-settings.json
-
   macos_setup:
     bootstrap_package: ""
 #    macos_setup_assistant: ../lib/macos/enrollment-profiles/automatic-enrollment.dep.json
