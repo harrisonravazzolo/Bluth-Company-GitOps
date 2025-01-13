@@ -8,7 +8,8 @@ agent_options:
   path: ../lib/agent-options.yml
 controls:
   enable_disk_encryption: true
-  custom_settings:
+  macos_settings:
+    custom_settings:
       - path: ../lib/macos/configuration-profiles-traditional/date-time.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-bluetooth-file-sharing.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-content-caching.mobileconfig
