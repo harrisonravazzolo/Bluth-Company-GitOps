@@ -1,6 +1,7 @@
 name: Workstations
 policies:
   - path: ../lib/macos/policies/macos-device-health.policies.yml
+  - path: ../lib/macos/policies/upgrade-firefox.policies.yml
 queries:
   - path: ../lib/macos/queries/collect-usb-devices.queries.yml
   - path: ../lib/macos/queries/collect-failed-login-attempts.queries.yml
