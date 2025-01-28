@@ -27,6 +27,7 @@ controls:
       - path: ../lib/macos/configuration-profiles-traditional/limit-ad-tracking.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/secure-terminal-keyboard.mobileconfig
       - path: ../lib/macos/configuration-profiles-ddm/passcode-settings-ddm.json
+      - path: ../lib/macos/configuration-profiles-traditional/managed-login-items.mobileconfig
   macos_setup:
     bootstrap_package: ""
 #    macos_setup_assistant: ../lib/macos/enrollment-profiles/automatic-enrollment.dep.json
