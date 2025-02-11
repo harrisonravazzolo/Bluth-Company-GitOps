@@ -15,19 +15,6 @@ controls:
       - path: ../lib/macos/configuration-profiles-traditional/disable-content-caching.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-guest-account.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-guest-shares.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-internet-sharing.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-media-sharing.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-safari-safefiles.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/enable-doh.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/enable-firewall-logging.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/enable-gatekeeper.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/enforce-library-validation.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/firewall.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/full-disk-access-for-fleetd.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/limit-ad-tracking.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/secure-terminal-keyboard.mobileconfig
-      - path: ../lib/macos/configuration-profiles-ddm/passcode-settings-ddm.json
-      - path: ../lib/macos/configuration-profiles-traditional/managed-login-items.mobileconfig
   macos_setup:
     bootstrap_package: ""
 #    macos_setup_assistant: ../lib/macos/enrollment-profiles/automatic-enrollment.dep.json
