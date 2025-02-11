@@ -15,6 +15,7 @@ controls:
       - path: ../lib/macos/configuration-profiles-traditional/disable-content-caching.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-guest-account.mobileconfig
       - path: ../lib/macos/configuration-profiles-traditional/disable-guest-shares.mobileconfig
+      - path: ../lib/macos/configuration-profiles-ddm/passcode-settings-ddm.json
   macos_setup:
     bootstrap_package: ""
 #    macos_setup_assistant: ../lib/macos/enrollment-profiles/automatic-enrollment.dep.json
