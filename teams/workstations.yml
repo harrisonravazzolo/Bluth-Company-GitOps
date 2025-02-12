@@ -24,7 +24,7 @@ controls:
       - package_path: ../lib/macos/software/zoom.yml # Zoom for macOS
   macos_updates:
     deadline: "2025-02-15"
-    minimum_version: "15.4.1"
+    minimum_version: "15.3.1"
   windows_settings:
     custom_settings: null
   windows_updates:
