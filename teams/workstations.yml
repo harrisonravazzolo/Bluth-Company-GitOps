@@ -11,12 +11,7 @@ controls:
   enable_disk_encryption: true
   macos_settings:
     custom_settings:
-      - path: ../lib/macos/configuration-profiles-traditional/date-time.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-content-caching.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-guest-account.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-guest-shares.mobileconfig
-      - path: ../lib/macos/configuration-profiles-ddm/passcode-settings-ddm.json
-  macos_updates:
+      - path: ../lib/macos/configuration-profiles-traditional/*
     deadline: "2025-02-15"
     minimum_version: "15.3.1"
   scripts:
