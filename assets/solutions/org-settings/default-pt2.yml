@@ -1,0 +1,28 @@
+# For Fleet Free: 
+# - This file updates policies, queries, agent_options, and controls for all hosts.
+
+# For Fleet Premium:
+# - This file updates policies and queries that run on all hosts ("All teams"). 
+# - Remove "controls" and add this to your YAML files in teams/ instead.
+
+policies:
+queries:
+agent_options:
+  path: ./lib/agent-options.yml
+controls:
+org_settings:
+  server_settings:
+    server_url: $FLEET_URL
+  org_info:
+    org_name: NoodleCorp
+  secrets:
+    - secret: "$FLEET_GLOBAL_ENROLL_SECRET"
+  fleet_desktop:
+    transparency_url: https://catoftheday.com
+  host_expiry_settings:
+    host_expiry_enabled: true
+    host_expiry_window: 30
+  webhook_settings:
+    activities_webhook:
+      enable_activities_webhook: true
+      destination_url: https://example.org/webhook_handler

@@ -1,0 +1,30 @@
+name: Engineering
+policies:
+  - path: ../lib/windows-device-health.policies.yml
+  - path: ../lib/linux-device-health.policies.yml
+  - path: ../lib/gatekeeper.policies.yml
+  - path: ../lib/all-windows-updates-installed.policies.yml
+queries:
+  - path: ../lib/collect-failed-login-attempts.queries.yml
+agent_options:
+  path: ../lib/agent-options.yml
+controls:
+  enable_disk_encryption: true
+  macos_settings:
+    custom_settings:
+      - path: ../lib/disable-bluetooth-file-sharing.mobileconfig
+      - path: ../lib/passcode-settings-ddm.json
+  macos_updates:
+    deadline: "2024-03-01"
+    minimum_version: 15.3.1
+  scripts:
+    - path: ../lib/collect-fleetd-logs.sh
+    - path: ../lib/remove-zoom-artifacts.script.sh
+    - path: ../lib/set-timezone.script.sh
+    - path: ../lib/enable-gatekeeper.sh
+    - path: ../lib/dad-joke.ps1
+team_settings:
+  secrets:
+    - secret: "$FLEET_ENGINEERING_ENROLL_SECRET"
+software:
+

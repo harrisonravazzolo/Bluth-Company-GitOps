@@ -1,0 +1,17 @@
+name: Engineering
+policies:
+  - path: ../lib/windows-device-health.policies.yml
+queries:
+  - path: ../lib/collect-failed-login-attempts.queries.yml
+agent_options:
+  path: ../lib/agent-options.yml
+controls:
+  scripts:
+    - path: ../lib/collect-fleetd-logs.sh
+    - path: ../lib/remove-zoom-artifacts.script.sh
+    - path: ../lib/set-timezone.script.sh
+team_settings:
+  secrets:
+    - secret: "$FLEET_ENGINEERING_ENROLL_SECRET"
+software:
+
