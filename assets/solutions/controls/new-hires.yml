@@ -14,6 +14,7 @@ controls:
     - path: ../lib/collect-fleetd-logs.sh
     - path: ../lib/remove-zoom-artifacts.script.sh
     - path: ../lib/set-timezone.script.sh
+    - path: ../lib/set-wallpaper.ps1'
 team_settings:
   secrets:
     - secret: "$FLEET_ENGINEERING_ENROLL_SECRET"
