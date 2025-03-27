@@ -9,8 +9,9 @@ controls:
   macos_updates:
     deadline: "2024-03-01"
     minimum_version: 15.3.1
-  scripts:
+  custom_settings:
     - path: ../lib/disable-bluetooth-file-sharing.mobileconfig
+  scripts:
     - path: ../lib/collect-fleetd-logs.sh
     - path: ../lib/remove-zoom-artifacts.script.sh
     - path: ../lib/set-timezone.script.sh
