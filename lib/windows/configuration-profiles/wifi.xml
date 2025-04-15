@@ -1,0 +1,63 @@
+<!--Use the following snippet to Add a new WiFi profile via CSP. -->
+<!-- 1) Do a find for YOURSSID and replace it with the SSID name -->
+<!-- 2) Do a find for 594F555253534944 and replace it with the SSID name, converted to Hex -->
+<!-- 3) Do a find for YOURPASSPHRASE and replace it with the passphrase -->
+<!-- 4) Generate a unique ID for the cmdID -->
+<!-- Note, that SSID in LocURI needs to be URL encoded -->
+
+
+<Add>
+ <CmdID>f4550c6a-48ae-408c-ae9b-fb0c275de6b8</CmdID>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Vendor/MSFT/WiFi/Profile/YOURSSID/WlanXml</LocURI>
+    </Target>
+    <Data>&lt;?xml version=&quot;1.0&quot; encoding=&quot;US-ASCII&quot;?&gt;&lt;WLANProfile xmlns=&quot;http://www.microsoft.com/networking/WLAN/profile/v1&quot;&gt;&lt;name&gt;YOURSSID&lt;/name&gt;&lt;SSIDConfig&gt;&lt;SSID&gt;&lt;hex&gt;594F555253534944&lt;/hex&gt;&lt;name&gt;YOURSSID&lt;/name&gt;&lt;/SSID&gt;&lt;/SSIDConfig&gt;&lt;connectionType&gt;ESS&lt;/connectionType&gt;&lt;connectionMode&gt;auto&lt;/connectionMode&gt;&lt;MSM&gt;&lt;security&gt;&lt;authEncryption&gt;&lt;authentication&gt;WPA2PSK&lt;/authentication&gt;&lt;encryption&gt;AES&lt;/encryption&gt;&lt;useOneX&gt;false&lt;/useOneX&gt;&lt;/authEncryption&gt;&lt;sharedKey&gt;&lt;keyType&gt;passPhrase&lt;/keyType&gt;&lt;protected&gt;false&lt;/protected&gt;&lt;keyMaterial&gt;YOURPASSPHRASE&lt;/keyMaterial&gt;&lt;/sharedKey&gt;&lt;/security&gt;&lt;/MSM&gt;&lt;/WLANProfile&gt;</Data>
+  </Item>
+</Add>
+
+
+<!-- This is the same snippet with no escaped XML under the Data tag -->
+
+<Add>
+  <CmdID>f4550c6a-48ae-408c-ae9b-fb0c275de6b8</CmdID>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Vendor/MSFT/WiFi/Profile/YOURSSID/WlanXml</LocURI>
+    </Target>
+    <Data>
+      <?xml version="1.0" encoding="US-ASCII"?>
+      <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+        <name>YOURSSID</name>
+        <SSIDConfig>
+          <SSID>
+            <hex>594F555253534944</hex>
+            <name>YOURSSID</name>
+          </SSID>
+        </SSIDConfig>
+        <connectionType>ESS</connectionType>
+        <connectionMode>auto</connectionMode>
+        <MSM>
+          <security>
+            <authEncryption>
+              <authentication>WPA2PSK</authentication>
+              <encryption>AES</encryption>
+              <useOneX>false</useOneX>
+            </authEncryption>
+            <sharedKey>
+              <keyType>passPhrase</keyType>
+              <protected>false</protected>
+              <keyMaterial>YOURPASSPHRASE</keyMaterial>
+            </sharedKey>
+          </security>
+        </MSM>
+      </WLANProfile>
+    </Data>
+  </Item>
+</Add>
