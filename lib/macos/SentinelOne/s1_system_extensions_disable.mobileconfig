@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>PayloadUUID</key>
+		<string>973DF2B5-2771-4D0D-A578-C5A8D36E67FD</string>
+		<key>PayloadType</key>
+		<string>Configuration</string>
+		<key>PayloadIdentifier</key>
+		<string>973DF2B5-2771-4D0D-A578-C5A8D36E67FD</string>
+		<key>PayloadDisplayName</key>
+		<string>SystemExtensionsDisable</string>
+		<key>PayloadDescription</key>
+		<string/>
+		<key>PayloadVersion</key>
+		<integer>1</integer>
+		<key>PayloadEnabled</key>
+		<true/>
+		<key>PayloadRemovalDisallowed</key>
+		<true/>
+		<key>PayloadScope</key>
+		<string>System</string>
+		<key>PayloadContent</key>
+		<array>
+			<dict>
+				<key>PayloadUUID</key>
+				<string>4928E0FE-3046-49DB-B89A-EAE67E95AC3E</string>
+				<key>PayloadType</key>
+				<string>com.apple.system-extension-policy</string>
+				<key>PayloadIdentifier</key>
+				<string>4928E0FE-3046-49DB-B89A-EAE67E95AC3E</string>
+				<key>PayloadDisplayName</key>
+				<string>System Extensions</string>
+				<key>PayloadDescription</key>
+				<string/>
+				<key>PayloadVersion</key>
+				<integer>1</integer>
+				<key>PayloadEnabled</key>
+				<true/>
+				<key>AllowUserOverrides</key>
+				<false/>
+				<key>NonRemovableFromUISystemExtensions</key>
+				<dict>
+					<key>4AYE5J54KN</key>
+					<array>
+						<string>com.sentinelone.network-monitoring</string>
+					</array>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</plist>

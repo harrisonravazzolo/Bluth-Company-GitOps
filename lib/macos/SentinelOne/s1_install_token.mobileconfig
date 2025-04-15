@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>PayloadContent</key>
+        <array>
+                <dict>
+                        <key>PayloadType</key>
+                        <string>com.sentinelone.registration-token</string>
+                        <key>PayloadIdentifier</key>
+                        <string>1908502B-DFFE-43A8-ABEC-E0830251CB67</string>
+                        <key>PayloadUUID</key>
+                        <string>1908502B-DFFE-43A8-ABEC-E0830251CBF5</string>
+                        <key>S1InstallRegistrationToken</key>
+                        <string>YOUR_SITE_TOKEN_HERE</string>
+                </dict>
+        </array>
+        <key>PayloadDisplayName</key>
+        <string>SentinelOne - Registration Token</string>
+        <key>PayloadDescription</key>
+        <string>SentinelOne Registration Token</string>
+        <key>PayloadIdentifier</key>
+        <string>CF478211-476A-47D6-BA6F-0A3333804A49</string>
+        <key>PayloadRemovalDisallowed</key>
+        <true/>
+        <key>PayloadScope</key>
+        <string>System</string>
+        <key>PayloadType</key>
+        <string>Configuration</string>
+        <key>PayloadUUID</key>
+        <string>1908502B-DFFE-43A8-ABEC-E0830251CB53</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+</dict>
+</plist>
