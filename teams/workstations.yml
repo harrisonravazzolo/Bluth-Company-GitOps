@@ -8,22 +8,6 @@ queries:
 agent_options:
   path: ../lib/agent-options.yml
 controls:
-  enable_disk_encryption: true
-  macos_settings:
-    custom_settings:
-      - path: ../lib/macos/configuration-profiles-traditional/date-time.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-content-caching.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-guest-account.mobileconfig
-      - path: ../lib/macos/configuration-profiles-traditional/disable-guest-shares.mobileconfig
-      - path: ../lib/macos/configuration-profiles-ddm/passcode-settings-ddm.json
-  macos_updates:
-    deadline: "2025-02-15"
-    minimum_version: "15.3.1"
-  scripts:
-    - path: ../lib/macos/scripts/collect-fleetd-logs.sh
-    - path: ../lib/macos/scripts/enable_auditd.sh
-    - path: ../lib/macos/scripts/set_ssh_banner.sh
-    - path: ../lib/macos/scripts/start_auditd.sh
 team_settings:
   secrets:
     - secret: "$FLEET_WORKSTATIONS_ENROLL_SECRET"
