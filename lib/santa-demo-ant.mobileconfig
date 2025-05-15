@@ -59,6 +59,15 @@
 										<key>rule_type</key>
 										<string>TEAMID</string>
 									</dict>
+									<dict>
+										<!-- Block WebEx -->
+										<key>identifier</key>
+										<string>J5PRW3692Y</string>
+										<key>policy</key>
+										<string>BLOCKLIST</string>
+										<key>rule_type</key>
+										<string>TEAMID</string>
+									</dict>
 								</array>
 							</dict>
 						</dict>
