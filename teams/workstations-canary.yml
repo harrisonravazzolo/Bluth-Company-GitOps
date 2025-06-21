@@ -10,7 +10,6 @@ policies:
 queries:
   - path: ../lib/macos/queries/collect-usb-devices.queries.yml
   - path: ../lib/macos/queries/collect-failed-login-attempts.queries.yml
-  - path: ../lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig
 agent_options:
   path: ../lib/agent-options.yml
 team_settings:

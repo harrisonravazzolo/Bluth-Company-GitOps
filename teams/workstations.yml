@@ -8,6 +8,9 @@ queries:
 agent_options:
   path: ../lib/agent-options.yml
 controls:
+  macos_settings:
+    custom_settings:
+      - path: ../lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig
 team_settings:
   secrets:
     - secret: "$FLEET_WORKSTATIONS_ENROLL_SECRET"
