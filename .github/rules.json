@@ -16,5 +16,12 @@
     "policy": "BLOCKLIST",
     "rule_type": "BINARY",
     "comment": "Always BLOCK the BundleExample.app binary in Santa's testdata files, for testing"
+  },
+  {
+    "identifier": "abc12345678910",
+    "policy": "BLOCKLIST",
+    "rule_type": "BINARY",
+    "comment": "Boblawlaw"
   }
+
 ]
