@@ -1,4 +1,4 @@
-name: 'Apply latest configuration to Fleet'
+name: 'Apply latest configuration to Fleet (with Santa)'
 
 on:
   push:
@@ -21,18 +21,78 @@ permissions:
   contents: read
 
 jobs:
+  # Step 1: Generate Santa profile
+  generate-santa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Generate Santa profile
+        run: |
+          echo "🔧 Generating Santa profile..."
+          
+          # Generate the profile
+          python generate_santa.py \
+            --template "santa_template.mobileconfig" \
+            --rules "rules.json" \
+            --output "santa_profile.mobileconfig"
+          
+          echo "✅ Generated: santa_profile.mobileconfig"
+
+      - name: Upload Santa profile as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: santa-profile
+          path: santa_profile.mobileconfig
+          retention-days: 30
+
+  # Step 2: Apply Fleet configuration (including the generated Santa profile)
   fleet-gitops:
+    needs: generate-santa
     runs-on: ubuntu-latest
     steps:
       - name: Checkout GitOps repository
         uses: actions/checkout@v4
+
+      - name: Download generated Santa profile
+        uses: actions/download-artifact@v4
+        with:
+          name: santa-profile
+          path: ./temp
+
+      - name: Create Fleet configuration directory structure
+        run: |
+          echo "📁 Creating Fleet configuration directory structure..."
+          mkdir -p ../lib/macos/configuration-profiles-traditional
+
+      - name: Move Santa profile to Fleet configuration path
+        run: |
+          echo "📋 Moving Santa profile to Fleet configuration path..."
+          
+          # Move the generated profile to the correct Fleet path
+          mv ./temp/santa_profile.mobileconfig ../lib/macos/configuration-profiles-traditional/
+          
+          echo "✅ Santa profile moved to: ../lib/macos/configuration-profiles-traditional/santa_profile.mobileconfig"
+          
+          # Verify the file is in place
+          ls -la ../lib/macos/configuration-profiles-traditional/
+          
+          # Show file details
+          echo "📊 Profile details:"
+          echo "   - Size: $(stat -f%z "../lib/macos/configuration-profiles-traditional/santa_profile.mobileconfig" 2>/dev/null || stat -c%s "../lib/macos/configuration-profiles-traditional/santa_profile.mobileconfig" 2>/dev/null || echo "unknown") bytes"
+          echo "   - Rules: $(grep -c "<key>identifier</key>" "../lib/macos/configuration-profiles-traditional/santa_profile.mobileconfig" || echo "0")"
 
       - name: Apply latest configuration to Fleet
         uses: ./.github/gitops-action
         with:
           # Run GitOps in dry-run mode for pull requests.
           dry-run-only: ${{ github.event_name == 'pull_request' && 'true' || 'false' }}
-          # delete-other-teams: false
         # Add FLEET_URL and FLEET_API_TOKEN to the repository secrets.
         # In addition, specify or add secrets for all the environment variables that are mentioned in the global/team YAML files.
         env:
@@ -40,7 +100,4 @@ jobs:
           FLEET_API_TOKEN: ${{ secrets.FLEET_API_TOKEN }}
           FLEET_GLOBAL_ENROLL_SECRET: ${{ secrets.FLEET_GLOBAL_ENROLL_SECRET }}
           FLEET_WORKSTATIONS_ENROLL_SECRET: ${{ secrets.FLEET_WORKSTATIONS_ENROLL_SECRET }}
-          FLEET_WORKSTATIONS_CANARY_ENROLL_SECRET: ${{ secrets.FLEET_WORKSTATIONS_CANARY_ENROLL_SECRET }}
-          FLEET_NEW_HIRE_ENROLL_SECRET: ${{ secrets.FLEET_NEW_HIRE_ENROLL_SECRET }}
-          FLEET_ENGINEERING_ENROLL_SECRET: ${{ secrets.FLEET_ENGINEERING_ENROLL_SECRET }}
-
+          FLEET_WORKSTATIONS_CANARY_ENROLL_SECRET: ${{ secrets.FLEET_WORKSTATIONS_CANARY_ENROLL_SECRET }} 
