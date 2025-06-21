@@ -22,6 +22,12 @@
     "policy": "BLOCKLIST",
     "rule_type": "BINARY",
     "comment": "Boblawlaw"
+  },
+  {
+    "identifier": "abc12345678910",
+    "policy": "BLOCKLIST",
+    "rule_type": "BINARY",
+    "comment": "I mean, it's one banana, Michael. What could it cost? 10 dollars?"
   }
 
 ]
