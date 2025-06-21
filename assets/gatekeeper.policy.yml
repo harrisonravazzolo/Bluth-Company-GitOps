@@ -1,5 +1,0 @@
-- name: Ensure Gatekeeper is enabled
-  query: SELECT 1 FROM gatekeeper WHERE assessments_enabled = 1;
-  description: Checks to make sure that the Gatekeeper feature is enabled on macOS devices. Gatekeeper tries to ensure only trusted software is run on a mac machine.
-  resolution: Please enable Gatekeeper, or talk to your IT team to enable it.
-  platform: darwin

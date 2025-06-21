@@ -1,5 +1,0 @@
-controls:
-  enable_disk_encryption: true
-  macos_updates:
-    deadline: "2025-03-01"
-    minimum_version: 15.3.1
