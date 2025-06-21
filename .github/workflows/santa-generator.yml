@@ -1,0 +1,86 @@
+name: Santa Profile Generator
+
+on:
+  workflow_dispatch:
+    inputs:
+      rules_file:
+        description: 'Rules JSON file path'
+        required: true
+        default: 'rules.json'
+      template_file:
+        description: 'Template mobileconfig file path'
+        required: true
+        default: 'santa_template.mobileconfig'
+      output_name:
+        description: 'Output file name'
+        required: false
+        default: 'santa_profile.mobileconfig'
+  workflow_call:
+    inputs:
+      rules_file:
+        description: 'Rules JSON file path'
+        required: true
+        type: string
+        default: 'rules.json'
+      template_file:
+        description: 'Template mobileconfig file path'
+        required: true
+        type: string
+        default: 'santa_template.mobileconfig'
+      output_name:
+        description: 'Output file name'
+        required: false
+        type: string
+        default: 'santa_profile.mobileconfig'
+    outputs:
+      profile_path:
+        description: 'Path to the generated profile'
+        value: ${{ jobs.generate.outputs.profile_path }}
+      profile_name:
+        description: 'Name of the generated profile'
+        value: ${{ jobs.generate.outputs.profile_name }}
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    outputs:
+      profile_path: ${{ steps.generate.outputs.profile_path }}
+      profile_name: ${{ steps.generate.outputs.profile_name }}
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Generate Santa profile
+      id: generate
+      run: |
+        echo "🔧 Generating Santa profile..."
+        
+        # Get input parameters
+        RULES_FILE="${{ github.event.inputs.rules_file || inputs.rules_file }}"
+        TEMPLATE_FILE="${{ github.event.inputs.template_file || inputs.template_file }}"
+        OUTPUT_NAME="${{ github.event.inputs.output_name || inputs.output_name }}"
+        
+        # Generate the profile
+        python generate_santa.py \
+          --template "$TEMPLATE_FILE" \
+          --rules "$RULES_FILE" \
+          --output "$OUTPUT_NAME"
+        
+        # Set outputs for other workflows
+        echo "profile_path=$OUTPUT_NAME" >> $GITHUB_OUTPUT
+        echo "profile_name=$OUTPUT_NAME" >> $GITHUB_OUTPUT
+        
+        echo "✅ Generated: $OUTPUT_NAME"
+    
+    - name: Upload profile as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: santa-profile
+        path: ${{ github.event.inputs.output_name || inputs.output_name }}
+        retention-days: 30 
