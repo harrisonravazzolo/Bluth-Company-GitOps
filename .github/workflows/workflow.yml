@@ -37,10 +37,16 @@ jobs:
         run: |
           echo "🔧 Generating Santa profile..."
           
-          # Generate the profile
-          python generate_santa.py \
-            --template "santa_template.mobileconfig" \
-            --rules "rules.json" \
+          # List files to debug
+          echo "📁 Current directory contents:"
+          ls -la
+          echo "📁 .github directory contents:"
+          ls -la .github/
+          
+          # Generate the profile using correct paths
+          python .github/generate_santa.py \
+            --template ".github/santa_template.mobileconfig" \
+            --rules ".github/rules.json" \
             --output "santa_profile.mobileconfig"
           
           echo "✅ Generated: santa_profile.mobileconfig"
