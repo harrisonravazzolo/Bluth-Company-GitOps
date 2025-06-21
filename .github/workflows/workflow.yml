@@ -75,24 +75,24 @@ jobs:
       - name: Create Fleet configuration directory structure
         run: |
           echo "📁 Creating Fleet configuration directory structure..."
-          mkdir -p ../lib/macos/configuration-profiles-traditional/output
+          mkdir -p lib/macos/configuration-profiles-traditional/output
 
       - name: Move Santa profile to Fleet configuration path
         run: |
           echo "📋 Moving Santa profile to Fleet configuration path..."
           
           # Move the generated profile to the correct Fleet path
-          mv ./temp/santa_profile.mobileconfig ../lib/macos/configuration-profiles-traditional/output/
+          mv ./temp/santa_profile.mobileconfig lib/macos/configuration-profiles-traditional/output/
           
-          echo "✅ Santa profile moved to: ../lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig"
+          echo "✅ Santa profile moved to: lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig"
           
           # Verify the file is in place
-          ls -la ../lib/macos/configuration-profiles-traditional/output/
+          ls -la lib/macos/configuration-profiles-traditional/output/
           
           # Show file details
-          echo "📊 Profile details:"
-          echo "   - Size: $(stat -f%z "../lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig" 2>/dev/null || stat -c%s "../lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig" 2>/dev/null || echo "unknown") bytes"
-          echo "   - Rules: $(grep -c "<key>identifier</key>" "../lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig" || echo "0")"
+          echo "�� Profile details:"
+          echo "   - Size: $(stat -f%z "lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig" 2>/dev/null || stat -c%s "lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig" 2>/dev/null || echo "unknown") bytes"
+          echo "   - Rules: $(grep -c "<key>identifier</key>" "lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig" || echo "0")"
 
       - name: Apply latest configuration to Fleet
         uses: ./.github/gitops-action
