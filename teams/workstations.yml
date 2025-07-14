@@ -11,6 +11,8 @@ controls:
   macos_settings:
     custom_settings:
       - path: ../lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig
+  scripts:
+    - path: ../lib/macos/scripts/secret-var-example.sh
 team_settings:
   secrets:
     - secret: "$FLEET_WORKSTATIONS_ENROLL_SECRET"
