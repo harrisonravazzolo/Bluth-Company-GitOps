@@ -33,16 +33,7 @@
 										<string>BLOCKLIST</string>
 										<key>rule_type</key>
 										<string>BINARY</string>
-									</dict>
-									<dict>
-										<!-- Block MSFT Teams -->
-										<key>identifier</key>
-										<string>UBF8T346G9</string>
-										<key>policy</key>
-										<string>BLOCKLIST</string>
-										<key>rule_type</key>
-										<string>TEAMID</string>
-									</dict>									
+									</dict>								
 								</array>
 							</dict>
 						</dict>
