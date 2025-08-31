@@ -10,7 +10,8 @@ agent_options:
 controls:
   macos_settings:
     custom_settings:
-      - path: ../lib/macos/configuration-profiles-traditional/output/santa_profile.mobileconfig
+      - path: ../lib/macos/configuration-profiles-traditional/santa-configuration.mobileconfig
+      - path: ../lib/macos/configuration-profiles-traditional/santa-rules.mobileconfig
   scripts:
     - path: ../lib/macos/scripts/secret-var-example.sh
 team_settings:
@@ -20,3 +21,4 @@ software:
   packages:
     - path: ../lib/macos/software/mozilla-firefox.yml # Mozilla Firefox for MacOS (universal)
     - path: ../lib/macos/software/google-chrome.yml # Google Chrome for macOS
+    - path: ../lib/macos/software/santa.yml
