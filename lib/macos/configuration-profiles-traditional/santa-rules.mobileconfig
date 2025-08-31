@@ -37,7 +37,7 @@
 									<dict>
 										<!-- Block MSFT Teams -->
 										<key>identifier</key>
-										<string>57T9237FN3</string>
+										<string>UBF8T346G9</string>
 										<key>policy</key>
 										<string>BLOCKLIST</string>
 										<key>rule_type</key>
