@@ -35,7 +35,7 @@
 										<string>BINARY</string>
 									</dict>
 									<dict>
-										<!-- Block WhatsApp.app -->
+										<!-- Block MSFT Teams -->
 										<key>identifier</key>
 										<string>57T9237FN3</string>
 										<key>policy</key>
