@@ -17,7 +17,7 @@
 								<key>StaticRules</key>
 								<array>
 									<dict>
-										<!-- Always allow files signed by North Pole Security Inc -->
+										<!-- Allow BetterBag -->
 										<key>identifier</key>
 										<string>ZMCG7MLDV9</string>
 										<key>policy</key>
@@ -26,22 +26,13 @@
 										<string>TEAMID</string>
 									</dict>
 									<dict>
-										<!-- Always BLOCK the BundleExample.app binary in Santa's testdata files, for testing -->
+										<!-- Block Chrome 143.2.45, CVE 2025-4563 -->
 										<key>identifier</key>
 										<string>b7c1e3fd640c5f211c89b02c2c6122f78ce322aa5c56eb0bb54bc422a8f8b670</string>
 										<key>policy</key>
 										<string>BLOCKLIST</string>
 										<key>rule_type</key>
 										<string>BINARY</string>
-									</dict>
-									<dict>
-										<!-- Block Telegram -->
-										<key>identifier</key>
-										<string>6N38VWS5BX</string>
-										<key>policy</key>
-										<string>BLOCKLIST</string>
-										<key>rule_type</key>
-										<string>TEAMID</string>
 									</dict>								
 								</array>
 							</dict>
