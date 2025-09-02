@@ -33,7 +33,16 @@
 										<string>BLOCKLIST</string>
 										<key>rule_type</key>
 										<string>BINARY</string>
-									</dict>								
+									</dict>
+									<dict>
+										<!-- Block Telegram app at TeamID level -->
+										<key>identifier</key>
+										<string>6N38VWS5BX</string>
+										<key>policy</key>
+										<string>BLOCKLIST</string>
+										<key>rule_type</key>
+										<string>TEAMID</string>
+									</dict>									
 								</array>
 							</dict>
 						</dict>
