@@ -35,15 +35,6 @@
 										<string>BINARY</string>
 									</dict>
 									<dict>
-										<!-- Block Telegram -->
-										<key>identifier</key>
-										<string>6N38VWS5BX</string>
-										<key>policy</key>
-										<string>BLOCKLIST</string>
-										<key>rule_type</key>
-										<string>TEAMID</string>
-									</dict>
-									<dict>
 										<!-- Allow Spotify -->
 										<key>identifier</key>
 										<string>2FNC3A47ZF</string>
