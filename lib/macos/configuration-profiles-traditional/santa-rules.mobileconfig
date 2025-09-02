@@ -26,7 +26,7 @@
 										<string>TEAMID</string>
 									</dict>
 									<dict>
-										<!-- Always BLOCK the BundleExample.app binary in Santa's testdata files, for testing -->
+										<!-- Block Chrome version 142.1.23 -->
 										<key>identifier</key>
 										<string>b7c1e3fd640c5f211c89b02c2c6122f78ce322aa5c56eb0bb54bc422a8f8b670</string>
 										<key>policy</key>
